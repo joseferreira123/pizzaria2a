@@ -1,20 +1,18 @@
-import { useState } from 'react'
-import {Routes, Route} from 'react-router-dom'
-import Home from './Home' 
+import {useState} from 'react'
+import './App.css'
+import { Routes, Route } from 'react-router-dom'
+import Listagem from './pages/Listagem';
 
-const App = () =>{
+const App = () => {
 
-
-  const [color] = useState("#191919")
+  const [color] = useState("#0000FF")
   document.body.style.backgroundColor = color
-  return(
 
-          <Routes>
-              <Route path="/" element={<Home/>} />
-              <Route path="/inicio" element={<inicio/>}  />
-          </Routes>
-
-
-      )
+  return (
+    <Routes>
+      <Route path="/" element={<Listagem />}/>
+    </Routes>
+  )
 }
-export default App
+
+export default App;
